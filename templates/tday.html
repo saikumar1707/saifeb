@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEVEL 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='bg4.jpg') }}");
+            background-size: cover; /* Set background-size to cover */
+            background-position: center center; /* Center the background image */
+            /* Additional styles */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: rgb(237, 23, 48);
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        .container {
+            /* Add container to center content */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set container height to full viewport height */
+        }
+        h3{
+            color: #a7209c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Teddy Day</h1>
+        <form action="/level4" method="post">
+            <h3>"As the fragrant petals of Rose Day fade into memories, and the heartfelt confessions of Propose Day linger in the air, we find ourselves immersed in the sweetness of Chocolate Day. With each passing day, our love blossoms like a rose, grows stronger with every proposal, and becomes sweeter with each indulgent treat. Let's cherish the moments we've shared, the promises we've made, and the love that continues to flourish as we journey through the enchanting days of Valentine's Week."</h3>
+
+
+            <label for="data">I'm soft and cuddly, with a button nose and eyes that gleam. Children love to hug me, and I'm often part of their sweetest dream. What am I? </label>
+            <input type="text" id="datap" name="datap" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+            
+            <label for="data">The occasion when you received your inaugural teddy bear from me. </label>
+            <input type="text" id="data2" name="data2" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+
+            <label for="data">The name of teddy we have: </label>
+            <input type="text" id="data0" name="data0" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+
+            
+
+            <label for="data">Describe aboubt the teddy and experience with it</label>
+            <input type="text" id="dat" name="dat" required>
+
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

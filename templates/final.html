@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='bg8.jpg') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* Additional styles */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: rgb(237, 23, 48);
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        .container {
+            /* Add container to center content */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set container height to full viewport height */
+        }
+        h1 {
+            font-size: 50px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        h4 {
+            color: #c609b6;
+        }
+        form {
+            background-color: rgba(250, 235, 215, 0.605);
+        }
+        .button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #f92323bf;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        a {
+    color: rgb(11, 11, 35);
+    text-decoration: none; /* Optional: Remove underline */}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h1>Happy Valentines Day</h1>
+            <h4>Hi! <br>
+            Ikkadidaka radaniki niku entha tym pattindo telidu but i hope you like it intha duram ga unnam nenu ninnu kalavalenu but em cheyalem edi aina mana future kosame and to make it good.<br>
+            nenu niku nachina gifts ivvalekapovachu ninnu baga chuskolekapovachu and time kuda ivvalekapovachu but i always think about you konni sarlu arichina edipinchina edi kavali ani kadu aa tym lo aipothayi and vaatini ekkuvaga pattinchukoku happy ga undam iddaram 
+            nenu em chesina em cheppina nikosam aalochista but sometimes i think more and expect more so appudappudu godavalu avtunnai but i am still happy that you are always with me and i know that you will be always with me kannamma i love you so much <br>I hope that you like this thing done by me for you <br>ela undo cheppu naku tarvata <br></h4>
+            <h3>!! LOVE YOU SO MUCH KANNAMMA !!</h3>
+            <button class="button"><a href="{{ url_for('download_file', filename='play.mp4') }}" download>Download chesi chudu ee rendu</a></button>
+            <button class="button"><a href="{{ url_for('download_file', filename='play2.mp4') }}" download>idi kuda kothavi kadu but chudu</a></button>
+        </form>
+    </div>
+</body>
+</html>

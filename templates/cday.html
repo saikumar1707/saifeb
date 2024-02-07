@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEVEL 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='bg3.jpg') }}");
+            background-size: cover; /* Set background-size to cover */
+            background-position: center center; /* Center the background image */
+            /* Additional styles */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: rgb(237, 23, 48);
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        .container {
+            /* Add container to center content */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set container height to full viewport height */
+        }
+        h3{
+            color: #a7209c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Chocolate Day</h1>
+        
+        <form action="/level3" method="post">
+            <h3>"As we bid farewell to Rose Day, with its fragrant blooms and tender gestures, we step into the realm of Propose Day, where hearts beat with anticipation and love's whispers fill the air. With roses exchanged and affections confessed, we now find ourselves on the doorstep of Chocolate Day, where sweetness takes center stage and indulgence knows no bounds. Let us embrace the joy of sharing delectable treats and the warmth of love's embrace as we journey through this week of romance and affection."</h3>
+
+            <label for="data">The day when i first gave you Chocolate: </label>
+            <input type="text" id="data2" name="data2" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+
+            <label for="data">The chocolate I presented to you during Valentine's Week </label>
+            <input type="text" id="data0" name="data0" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+
+            <label for="data">Your Favourite chocolate </label>
+            <input type="text" id="datap" name="datap" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+
+            <label for="data">The chocolate you want now</label>
+            <input type="text" id="dat" name="dat" required>
+
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='bg.jpg') }}");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* Additional styles */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: rgb(237, 23, 48);
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        .container {
+            /* Add container to center content */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set container height to full viewport height */
+        }
+        h4{
+            color: #a7209c;
+        }
+        form{
+            background-color: rgba(250, 235, 215, 0.605);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Rose Day</h1>
+        
+        <form action="/level1" method="post">
+            <h4>Welcome to the Valentine's Escape Room Challenge! Love is in the air, but first, you must navigate through a series of mind-bending puzzles and challenges to unlock the secrets of this romantic escape room. Are you ready to put your love and wit to the test?
+
+                As you venture deeper into the escape room, you'll encounter a variety of puzzles inspired by the spirit of Valentine's Day. From decoding love letters to unraveling romantic riddles, each challenge will bring you closer to unlocking the mystery of the ultimate Valentine's surprise.
+                
+                But beware! Time is ticking, and only the most cunning and creative couples will succeed in escaping the room and claiming their prize. So grab your partner's hand, ignite the flames of your love, and let the adventure begin!
+                
+                Remember, in the game of love, every puzzle solved is a step closer to victory. Are you ready to escape into a world of romance and mystery? Let the Valentine's Escape Room Challenge commence!"</h4>
+            <label for="data">gulabi ___________ rendu mullu chesi gundeloki guchukunnave :</label>
+            <input type="text" id="data7" name="data7" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+
+            <label for="data"> Promise me now, ________, and never let go of that promise :</label>
+            <input type="text" id="data9" name="data9" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+
+
+            <label for="data">The day when i wished you the rose day for 1st time :</label>
+            <input type="text" id="data" name="data" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+
+            <label for="data">If you were to write a love letter to me using roses as a metaphor, what would it say? :</label>
+            <input type="text" id="dat" name="dat" required><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

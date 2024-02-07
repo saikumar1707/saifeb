@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEVEL 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='bg6.jpg') }}");
+            background-size: cover; /* Set background-size to cover */
+            background-position: center center; /* Center the background image */
+            /* Additional styles */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: rgb(237, 23, 48);
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        .container {
+            /* Add container to center content */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set container height to full viewport height */
+        }
+        h3{
+            color: #a7209c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Kiss day</h1>
+        
+        <form action="/level7" method="post">
+            <h3>"As we journey through the levels and days of love, from the sweetness of Rose Day to the promises of Promise Day, the warmth of Hug Day, and the tenderness of Teddy Day, we now find ourselves standing at the threshold of Kiss Day. It's a day to celebrate the intimacy and passion shared between two hearts, where a single kiss can speak volumes of love. Let's embrace the beauty of this moment and cherish the power of a tender kiss as we continue our journey through the enchanting week of Valentine's celebrations."</h3>
+
+            <label for="data">Buggaladha mudhulada Penavesukunna _______ Nuvvu korukunna sogasuladha</label>
+            <input type="text" id="dataq" name="dataq" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+
+            <label for="data"> The time of day when we shared our first kiss was in the :</label>
+            <input type="text" id="data6" name="data6" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+
+            <label for="data">Any gift you want </label>
+            <input type="text" id="data4" name="data4" required><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

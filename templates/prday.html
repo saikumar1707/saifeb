@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEVEL 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='bg7.jpg') }}");
+            background-size: cover; /* Set background-size to cover */
+            background-position: center center; /* Center the background image */
+            /* Additional styles */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: rgb(237, 23, 48);
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        .container {
+            /* Add container to center content */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set container height to full viewport height */
+        }
+        h3{
+            color: #a7209c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Promise day</h1>
+        <form action="/level5" method="post">
+            <h3>"As we bid farewell to the sweetness of Chocolate Day and the cuddly companionship of Teddy Day, we now find ourselves stepping into the solemn promises of Promise Day. It's a time to reflect on the vows we've made, the commitments we hold dear, and the unbreakable bond that binds us together. Let's embrace the spirit of trust, loyalty, and devotion as we embark on this meaningful journey through Promise Day."</h3>
+
+
+            <label for="data">rearrange and type without spaces "wleeothverroevfretge"</label>
+            <input type="text" id="datap" name="datap" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+
+            <label for="data">ottu vesi nenu cheppalenu le na ______ kanna nuvvu ekkuve</label>
+            <input type="text" id="datal" name="datal" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+
+
+            <label for="data">Promise you want to make today</label>
+            <input type="text" id="data4" name="data4" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

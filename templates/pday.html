@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEVEL 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='bg2.jpg') }}");
+            background-size: cover; /* Set background-size to cover */
+            background-position: center center; /* Center the background image */
+            /* Additional styles */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: rgb(245, 18, 44);
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        .container {
+            /* Add container to center content */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set container height to full viewport height */
+        }
+        h3{
+            color: #a7209c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Propose Day</h1>
+        <form action="/level2" method="post">
+            <h3>"Congratulations on completing the Rose Day Chamber, where the fragrance of love filled the air and romance bloomed at every turn.<br><br> Now, as you step into the Propose Day Chamber, anticipation fills the air. Here, amidst the whispers of sweet confessions, puzzles await that symbolize the courage of expressing your deepest feelings. From unraveling love poems to cherishing memories, each challenge draws you closer together. Embrace the journey, cherish every moment, and let the magic of Propose Day guide you towards a future filled with love and happiness."</h3>
+
+            <label for="data">I am the shortest word in the English language that expresses identity. What am I?:</label>
+            <input type="text" id="data1" name="data1" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+
+            
+
+            <label for="data">I am the reason for smiles, the cure for sorrow. I fill the heart today and promise tomorrow. What am I?</label>
+            <input type="text" id="datap" name="datap" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+
+
+            <label for="data">Never in daylight, but surrounded in sun.Found first in unicorns, it is centered in fun</label>
+            <input type="text" id="data0" name="data0" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+
+
+
+
+
+
+
+
+
+
+            <label for="data">Can you describe your dream proposal scenario? :</label>
+            <input type="text" id="dat2" name="dat2" required>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

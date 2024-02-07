@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Quiz Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="greeting-card">
+        <h2>Happy Valentine's Day!</h2>
+        <p>Dear {{ score }}/5, you scored on our Valentine's Quiz.</p>
+        <p>Thank you for taking the time to answer the questions. Here's to many more wonderful moments together!</p>
+    </div>
+</body>
+</html>

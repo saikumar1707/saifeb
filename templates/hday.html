@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEVEL 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='bg5.jpg') }}");
+            background-size: cover; /* Set background-size to cover */
+            background-position: center center; /* Center the background image */
+            /* Additional styles */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: rgb(237, 23, 48);
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        .container {
+            /* Add container to center content */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set container height to full viewport height */
+        }
+        h3{
+            color: #a7209c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy hug day</h1>
+        <form action="/level6" method="post">
+            <h3>"As we bid farewell to the heartfelt promises exchanged on Promise Day, we find ourselves approaching Hug Day with a longing for connection, even across the miles that separate us. Despite the distance, our bonds remain strong, and our affection knows no bounds. On this special day, let's embrace each other with virtual hugs, sending warmth, love, and comfort across the long distance that separates us. Though we may be apart in body, our hearts are always close, and our embrace is felt across the miles."</h3>
+
+            <label for="data">Kaugiliruku Aayene Thagile _____ praaname:</label>
+            <input type="text" id="data5" name="data5" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+
+            <label for="data">I'm a comforting hug, wrapping you in love and warmth. What am I?:</label>
+            <input type="text" id="dataq" name="dataq" required><br>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}<br>
+            <label for="data">Express your feeling when we hug</label>
+            <input type="text" id="data4" name="data4" required><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
