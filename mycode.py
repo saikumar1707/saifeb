@@ -2,8 +2,7 @@ from flask import Flask, render_template, request, flash, send_from_directory
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Required for flash messages
-from PIL import Image
-import random
+
 from pymongo.errors import AutoReconnect
 from pymongo import MongoClient
 
